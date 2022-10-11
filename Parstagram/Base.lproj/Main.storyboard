@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RfM-Fq-Xta">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -89,6 +89,62 @@
                     <view key="view" contentMode="scaleToFill" id="fBV-eR-2OS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-Qw-475">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="398" id="tI0-hy-m4g" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="398"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tI0-hy-m4g" id="zgO-cW-UI7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OZO-ZV-ebz">
+                                                    <rect key="frame" x="8" y="8" width="398" height="344"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="345" id="N6c-4e-LwS"/>
+                                                        <constraint firstAttribute="height" constant="344" id="frZ-Iq-oT0"/>
+                                                        <constraint firstAttribute="width" secondItem="OZO-ZV-ebz" secondAttribute="height" multiplier="199:172" id="wS2-ik-599"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Tim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plr-mE-915">
+                                                    <rect key="frame" x="8" y="360" width="29" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow, I love photos!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-vJ-l5f">
+                                                    <rect key="frame" x="45" y="360" width="361" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OZO-ZV-ebz" firstAttribute="leading" secondItem="zgO-cW-UI7" secondAttribute="leading" constant="8" id="3aK-gt-Ai4"/>
+                                                <constraint firstItem="agQ-vJ-l5f" firstAttribute="leading" secondItem="Plr-mE-915" secondAttribute="trailing" constant="8" id="D5f-1L-UuL"/>
+                                                <constraint firstItem="Plr-mE-915" firstAttribute="top" secondItem="OZO-ZV-ebz" secondAttribute="bottom" constant="8" id="NOk-LN-p7I"/>
+                                                <constraint firstAttribute="trailing" secondItem="OZO-ZV-ebz" secondAttribute="trailing" constant="8" id="OLr-QQ-bWt"/>
+                                                <constraint firstAttribute="bottom" secondItem="agQ-vJ-l5f" secondAttribute="bottom" constant="8" id="Q7m-6a-2h9"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="agQ-vJ-l5f" secondAttribute="bottom" constant="8" id="QVf-pe-je1"/>
+                                                <constraint firstAttribute="trailing" secondItem="agQ-vJ-l5f" secondAttribute="trailing" constant="8" id="SOX-z6-vIw"/>
+                                                <constraint firstItem="agQ-vJ-l5f" firstAttribute="top" secondItem="OZO-ZV-ebz" secondAttribute="bottom" constant="8" id="WdW-mg-Xdp"/>
+                                                <constraint firstItem="OZO-ZV-ebz" firstAttribute="top" secondItem="zgO-cW-UI7" secondAttribute="top" constant="8" id="ZdF-N1-IEX"/>
+                                                <constraint firstItem="Plr-mE-915" firstAttribute="leading" secondItem="zgO-cW-UI7" secondAttribute="leading" constant="8" id="tBu-gU-Qaz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="agQ-vJ-l5f" id="reD-cr-EU0"/>
+                                            <outlet property="photoView" destination="OZO-ZV-ebz" id="pMx-Yn-dZj"/>
+                                            <outlet property="usernameLabel" destination="Plr-mE-915" id="fmE-1H-miB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iDc-zU-eQT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -99,10 +155,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="A7R-Qw-475" id="2O1-RR-HU2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lm9-Zk-mba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533" y="68"/>
+            <point key="canvasLocation" x="1531.8840579710145" y="67.633928571428569"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="RSO-Ur-e6e">
